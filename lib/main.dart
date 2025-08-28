@@ -32,21 +32,34 @@ class HomePage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Row(
-          children: [
-            Container(
-              color: Colors.red,
-              height: 50,
-              width: 50,
-              child: const Center(child: Text('Fix')),
-            ),
-            Container(
-              color: Colors.blue,
-              height: 50,
-              width: 100,
-              child: const Center(child: Text('Fix')),
-            ),
-          ],
-        ),
+                children: [
+                  // Widget ini punya lebar tetap
+                  Container(
+                    color: Colors.red,
+                    height: 50,
+                    width: 50,
+                    child: const Center(child: Text('Fix')),
+                  ),
+                  // Widget ini akan mengisi 1/3 sisa ruang
+                  Expanded(
+                    flex: 1, // Mendapat 1 bagian dari sisa ruang
+                    child: Container(
+                      color: Colors.blue,
+                      height: 50,
+                      child: const Center(child: Text('flex: 1')),
+                    ),
+                  ),
+                  // Widget ini akan mengisi 2/3 sisa ruang
+                  Expanded(
+                    flex: 2, // Mendapat 2 bagian dari sisa ruang
+                    child: Container(
+                      color: Colors.green,
+                      height: 50,
+                      child: const Center(child: Text('flex: 2')),
+                    ),
+                  ),
+                ],
+              ),
       ),
     );
   }

@@ -29,8 +29,11 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Beranda'),
       ),
-      body: Image.network(
-        'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+      body: IconButton(
+        onPressed: () => debugPrint('IconButton Ditekan!'),
+        icon: const Icon(Icons.favorite),
+        iconSize: 40,
+        color: Colors.red,
       ),
     );
   }

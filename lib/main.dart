@@ -9,9 +9,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Aplikasiku',
-      home: HomePage(),
+      theme: ThemeData(
+        primaryColor: Colors.white,
+        primarySwatch: Colors.purple,
+      ),
+      home: const HomePage(),
     );
   }
 }
@@ -22,13 +26,28 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Beranda'),
-      ),
-      body: Container(
-        color: Colors.yellow,
-        child: const Center(child: Text('Halo semua')),
-      ),
-    );
+        appBar: AppBar(
+          title: const Text('Beranda'),
+        ),
+        body: Stack(
+          alignment: Alignment.center, // Menengahkan semua anak
+          children: <Widget>[
+            // Latar belakang
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.red,
+            ),
+            // Teks di atas latar belakang
+            Container(
+              padding: const EdgeInsets.all(8.0),
+              color: Colors.black.withOpacity(0.5),
+              child: const Text(
+                'Teks di Atas',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ],
+        ));
   }
 }

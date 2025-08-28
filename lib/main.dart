@@ -22,6 +22,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Beranda'),
+      ),
       body: Container(
         color: Colors.yellow,
         child: const Center(child: Text('Halo semua')),

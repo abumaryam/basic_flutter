@@ -26,28 +26,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Beranda'),
+      appBar: AppBar(
+        title: const Text('Beranda'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ElevatedButton(
+          onPressed: () => debugPrint('Test'),
+          child: const Text('Tombol dengan Padding'),
         ),
-        body: Stack(
-          alignment: Alignment.center, // Menengahkan semua anak
-          children: <Widget>[
-            // Latar belakang
-            Container(
-              width: 200,
-              height: 200,
-              color: Colors.red,
-            ),
-            // Teks di atas latar belakang
-            Container(
-              padding: const EdgeInsets.all(8.0),
-              color: Colors.black.withOpacity(0.5),
-              child: const Text(
-                'Teks di Atas',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          ],
-        ));
+      ),
+    );
   }
 }

@@ -21,8 +21,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Halo Semua'),
+    return Container(
+      color: Colors.yellow,
+      child: const Text('Halo semua'),
     );
   }
 }

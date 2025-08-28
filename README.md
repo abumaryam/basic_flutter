@@ -1,16 +1,24 @@
-# basic_flutter
+# Basic Flutter
+Aplikasi ini merupakan aplikasi sederhana yang dibuat untuk belajar dasar-dasar Flutter. Dengan aplikasi ini, Anda dapat memahami struktur dasar project Flutter, cara membuat widget, serta menjalankan aplikasi Flutter pertama Anda.
 
-A new Flutter project.
+## Cara Instalasi
 
-## Getting Started
+1. Pastikan Anda sudah menginstall [Flutter](https://flutter.dev/docs/get-started/install) di komputer Anda.
+2. Clone repository ini:
+   ```
+   git clone <url-repo-anda>
+   ```
+3. Masuk ke direktori project:
+   ```
+   cd basic-flutter
+   ```
+4. Jalankan perintah berikut untuk menginstall dependencies:
+   ```
+   flutter pub get
+   ```
+5. Jalankan aplikasi di emulator atau perangkat fisik:
+   ```
+   flutter run
+   ```
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Selamat mencoba dan selamat belajar Flutter!

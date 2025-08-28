@@ -31,9 +31,21 @@ class HomePage extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: ElevatedButton(
-          onPressed: () => debugPrint('Test'),
-          child: const Text('Tombol dengan Padding'),
+        child: Row(
+          children: [
+            Container(
+              color: Colors.red,
+              height: 50,
+              width: 50,
+              child: const Center(child: Text('Fix')),
+            ),
+            Container(
+              color: Colors.blue,
+              height: 50,
+              width: 100,
+              child: const Center(child: Text('Fix')),
+            ),
+          ],
         ),
       ),
     );
